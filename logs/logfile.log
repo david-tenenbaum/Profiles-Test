@@ -1,0 +1,925 @@
+2023-08-11T14:06:33.198-0600	INFO	validate/access.go:29	Checking warehouse connectivity
+
+2023-08-11T14:06:34.429-0600	INFO	validate/access.go:50	Checking required schema access
+
+2023-08-11T14:06:34.689-0600	INFO	validate/access.go:72	Preparing registry setup
+
+2023-08-11T14:06:37.142-0600	INFO	validate/access.go:81	Accessing context
+
+2023-08-11T14:06:43.398-0600	INFO	validate/access.go:91	Accessing all models
+
+2023-08-11T14:06:43.398-0600	INFO	validate/access.go:103	Checking required access for creating UDFs
+
+2023-08-11T14:06:43.398-0600	INFO	validate/access.go:117	Checking required access to inputs for models
+
+2023-08-11T14:06:51.845-0600	ERROR	base/checkAccess.go:32	insuffecient grants on input objects
+
+2023-08-11T14:06:51.847-0600	ERROR	validate/access.go:126	insuffecient grants on inputs: 
+Error: insuffecient grants on input objects, please run following queries to grant required privileges: 
+GRANT USAGE ON DATABASE rudder_events_production TO ROLE ANALYTICS_ROLE;
+GRANT USAGE ON SCHEMA rudder_events_production.web TO ROLE ANALYTICS_ROLE;
+GRANT SELECT ON TABLE rudder_events_production.web.identifies TO ROLE ANALYTICS_ROLE;
+GRANT SELECT ON TABLE rudder_events_production.web.tracks TO ROLE ANALYTICS_ROLE;
+
+
+2023-08-21T11:55:42.372-0400	ERROR	core/project.go:452	while trying to parse /Users/davidtenenbaum/Desktop/Sales-Profiles/models/inputs.yaml: yaml: unmarshal errors:
+  line 4: field app_defaults not found in type wht.InputDeclSpec
+  line 11: field to_default_stitcher not found in type base.IdBuildSpec
+  line 14: field app_defaults not found in type wht.InputDeclSpec
+  line 21: field to_default_stitcher not found in type base.IdBuildSpec
+  line 24: field app_defaults not found in type wht.InputDeclSpec
+  line 31: field to_default_stitcher not found in type base.IdBuildSpec
+
+2023-08-21T11:55:42.375-0400	ERROR	core/project.go:266	populating from models folders for /Users/davidtenenbaum/Desktop/Sales-Profiles: while trying to parse /Users/davidtenenbaum/Desktop/Sales-Profiles/models/inputs.yaml: yaml: unmarshal errors:
+  line 4: field app_defaults not found in type wht.InputDeclSpec
+  line 11: field to_default_stitcher not found in type base.IdBuildSpec
+  line 14: field app_defaults not found in type wht.InputDeclSpec
+  line 21: field to_default_stitcher not found in type base.IdBuildSpec
+  line 24: field app_defaults not found in type wht.InputDeclSpec
+  line 31: field to_default_stitcher not found in type base.IdBuildSpec
+
+2023-08-21T11:56:10.584-0400	ERROR	core/project.go:452	while trying to parse /Users/davidtenenbaum/Desktop/Sales-Profiles/models/inputs.yaml: yaml: unmarshal errors:
+  line 10: field to_default_stitcher not found in type base.IdBuildSpec
+  line 19: field to_default_stitcher not found in type base.IdBuildSpec
+  line 28: field to_default_stitcher not found in type base.IdBuildSpec
+
+2023-08-21T11:56:10.587-0400	ERROR	core/project.go:266	populating from models folders for /Users/davidtenenbaum/Desktop/Sales-Profiles: while trying to parse /Users/davidtenenbaum/Desktop/Sales-Profiles/models/inputs.yaml: yaml: unmarshal errors:
+  line 10: field to_default_stitcher not found in type base.IdBuildSpec
+  line 19: field to_default_stitcher not found in type base.IdBuildSpec
+  line 28: field to_default_stitcher not found in type base.IdBuildSpec
+
+2023-08-21T11:56:39.037-0400	ERROR	core/project.go:488	populating default models: getting all inputs Models: listing models for child source models/: error listing models: error building model user_id_stitcher: unknown entity user
+
+2023-08-21T11:56:39.039-0400	ERROR	core/project.go:266	populating from models folders for /Users/davidtenenbaum/Desktop/Sales-Profiles: populating default models: getting all inputs Models: listing models for child source models/: error listing models: error building model user_id_stitcher: unknown entity user
+
+2023-08-21T11:57:07.629-0400	ERROR	core/project.go:452	while trying to parse /Users/davidtenenbaum/Desktop/Sales-Profiles/models/profiles.yaml: EOF
+
+2023-08-21T11:57:07.631-0400	ERROR	core/project.go:266	populating from models folders for /Users/davidtenenbaum/Desktop/Sales-Profiles: while trying to parse /Users/davidtenenbaum/Desktop/Sales-Profiles/models/profiles.yaml: EOF
+
+2023-08-21T12:01:16.915-0400	INFO	validate/access.go:29	Checking warehouse connectivity
+
+2023-08-21T12:01:17.558-0400	INFO	validate/access.go:50	Checking required schema access
+
+2023-08-21T12:01:17.839-0400	INFO	validate/access.go:72	Preparing registry setup
+
+2023-08-21T12:01:23.322-0400	INFO	validate/access.go:81	Accessing context
+
+2023-08-21T12:01:25.960-0400	INFO	validate/access.go:91	Accessing all models
+
+2023-08-21T12:01:25.961-0400	INFO	validate/access.go:103	Checking required access for creating UDFs
+
+2023-08-21T12:01:25.961-0400	INFO	validate/access.go:117	Checking required access to inputs for models
+
+2023-08-21T12:01:48.842-0400	INFO	validate/access.go:129	All required access are available
+
+2023-08-21T12:01:48.842-0400	INFO	validate/access.go:130	Connection environment: dev have all the required read/right privileges
+
+2023-08-21T12:02:35.106-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_3 to output/dev/seq_no/3. 
+
+
+2023-08-21T12:02:36.291-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_da5ac98b_3 to output/dev/seq_no/3. 
+
+
+2023-08-21T12:03:04.531-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-21T12:03:38.221-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_4 to output/dev/seq_no/4. 
+
+
+2023-08-21T12:03:38.907-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_4
+
+2023-08-21T12:03:40.505-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_4
+
+2023-08-21T12:03:54.227-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_4 ran in 13.721238834s
+
+2023-08-21T12:03:57.693-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_da5ac98b_4 to output/dev/seq_no/4. 
+
+
+2023-08-21T12:03:58.173-0400	INFO	base/material.go:328	Preparing material Material_account_profile_da5ac98b_4
+
+2023-08-21T12:03:59.529-0400	INFO	base/material.go:391	Running material Material_account_profile_da5ac98b_4
+
+2023-08-21T12:04:01.401-0400	INFO	base/material.go:399	Material Material_account_profile_da5ac98b_4 ran in 1.871963125s
+
+2023-08-21T15:51:19.475-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_5 to output/dev/seq_no/5. 
+
+
+2023-08-21T15:51:20.645-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_10e88045_5 to output/dev/seq_no/5. 
+
+
+2023-08-21T15:51:25.092-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-21T15:51:54.917-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_6 to output/dev/seq_no/6. 
+
+
+2023-08-21T15:51:55.300-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_6
+
+2023-08-21T15:51:56.374-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_6
+
+2023-08-21T15:52:09.601-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_6 ran in 13.223795833s
+
+2023-08-21T15:52:12.686-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_10e88045_6 to output/dev/seq_no/6. 
+
+
+2023-08-21T15:52:13.158-0400	INFO	base/material.go:328	Preparing material Material_account_profile_10e88045_6
+
+2023-08-21T15:52:14.324-0400	INFO	base/material.go:391	Running material Material_account_profile_10e88045_6
+
+2023-08-21T15:52:24.412-0400	INFO	base/material.go:399	Material Material_account_profile_10e88045_6 ran in 10.087424s
+
+2023-08-21T15:56:22.876-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-21T15:56:56.353-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_7 to output/dev/seq_no/7. 
+
+
+2023-08-21T15:56:56.741-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_7
+
+2023-08-21T15:56:57.865-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_7
+
+2023-08-21T15:57:09.670-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_7 ran in 11.804049209s
+
+2023-08-21T15:57:12.833-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_4fe5374a_7 to output/dev/seq_no/7. 
+
+
+2023-08-21T15:57:13.277-0400	INFO	base/material.go:328	Preparing material Material_account_profile_4fe5374a_7
+
+2023-08-21T15:57:14.657-0400	INFO	base/material.go:391	Running material Material_account_profile_4fe5374a_7
+
+2023-08-21T15:57:25.546-0400	INFO	base/material.go:399	Material Material_account_profile_4fe5374a_7 ran in 10.88833125s
+
+2023-08-24T15:37:58.914-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_8 to output/dev/seq_no/8. 
+
+
+2023-08-24T15:38:00.222-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_074c1e3f_8 to output/dev/seq_no/8. 
+
+
+2023-08-24T15:38:28.366-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T15:39:02.853-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_9 to output/dev/seq_no/9. 
+
+
+2023-08-24T15:39:03.222-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_9
+
+2023-08-24T15:39:04.187-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_9
+
+2023-08-24T15:39:16.494-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_9 ran in 12.305790083s
+
+2023-08-24T15:39:19.977-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_074c1e3f_9 to output/dev/seq_no/9. 
+
+
+2023-08-24T15:39:20.510-0400	INFO	base/material.go:328	Preparing material Material_account_profile_074c1e3f_9
+
+2023-08-24T15:39:21.717-0400	INFO	base/material.go:391	Running material Material_account_profile_074c1e3f_9
+
+2023-08-24T15:43:46.998-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_10 to output/dev/seq_no/10. 
+
+
+2023-08-24T15:43:48.114-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_227a6cfc_10 to output/dev/seq_no/10. 
+
+
+2023-08-24T15:43:51.222-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T15:44:25.872-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_11 to output/dev/seq_no/11. 
+
+
+2023-08-24T15:44:26.251-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_11
+
+2023-08-24T15:44:27.351-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_11
+
+2023-08-24T15:44:40.143-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_11 ran in 12.791083958s
+
+2023-08-24T15:44:43.435-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_227a6cfc_11 to output/dev/seq_no/11. 
+
+
+2023-08-24T15:44:43.925-0400	INFO	base/material.go:328	Preparing material Material_account_profile_227a6cfc_11
+
+2023-08-24T15:44:45.117-0400	INFO	base/material.go:391	Running material Material_account_profile_227a6cfc_11
+
+2023-08-24T15:46:46.050-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T15:47:21.195-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_12 to output/dev/seq_no/12. 
+
+
+2023-08-24T15:47:21.556-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_12
+
+2023-08-24T15:47:22.911-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_12
+
+2023-08-24T15:47:36.552-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_12 ran in 13.640390417s
+
+2023-08-24T15:47:40.130-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_227a6cfc_12 to output/dev/seq_no/12. 
+
+
+2023-08-24T15:47:40.663-0400	INFO	base/material.go:328	Preparing material Material_account_profile_227a6cfc_12
+
+2023-08-24T15:47:41.731-0400	INFO	base/material.go:391	Running material Material_account_profile_227a6cfc_12
+
+2023-08-24T15:48:38.495-0400	ERROR	features/model.go:92	setting feature model vars failed, %!w(*errors.errorString=&{no definitions found in var {{      {[] [] } []} {{ }      {[] [] } []}}})
+
+2023-08-24T15:48:38.498-0400	ERROR	core/project.go:488	populating default models: getting all inputs Models: listing models for child source models/: error listing models: error building model account_profile: setting feature model vars failed, no definitions found in var {{      {[] [] } []} {{ }      {[] [] } []}}
+
+2023-08-24T15:48:38.498-0400	ERROR	core/project.go:266	populating from models folders for /Users/davidtenenbaum/Desktop/Sales-Profiles: populating default models: getting all inputs Models: listing models for child source models/: error listing models: error building model account_profile: setting feature model vars failed, no definitions found in var {{      {[] [] } []} {{ }      {[] [] } []}}
+
+2023-08-24T15:48:53.742-0400	ERROR	features/model.go:92	setting feature model vars failed, %!w(*errors.errorString=&{no definitions found in var {{      {[] [] } []} {{ }      {[] [] } []}}})
+
+2023-08-24T15:48:53.744-0400	ERROR	core/project.go:488	populating default models: getting all inputs Models: listing models for child source models/: error listing models: error building model account_profile: setting feature model vars failed, no definitions found in var {{      {[] [] } []} {{ }      {[] [] } []}}
+
+2023-08-24T15:48:53.744-0400	ERROR	core/project.go:266	populating from models folders for /Users/davidtenenbaum/Desktop/Sales-Profiles: populating default models: getting all inputs Models: listing models for child source models/: error listing models: error building model account_profile: setting feature model vars failed, no definitions found in var {{      {[] [] } []} {{ }      {[] [] } []}}
+
+2023-08-24T15:49:00.534-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T15:49:34.394-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_13 to output/dev/seq_no/13. 
+
+
+2023-08-24T15:49:34.750-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_13
+
+2023-08-24T15:49:36.004-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_13
+
+2023-08-24T15:49:48.023-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_13 ran in 12.01813925s
+
+2023-08-24T15:49:51.191-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_3742e40b_13 to output/dev/seq_no/13. 
+
+
+2023-08-24T15:49:51.736-0400	INFO	base/material.go:328	Preparing material Material_account_profile_3742e40b_13
+
+2023-08-24T15:49:52.851-0400	INFO	base/material.go:391	Running material Material_account_profile_3742e40b_13
+
+2023-08-24T15:53:05.615-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T15:53:34.706-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_b1c731d7_14 to output/dev/seq_no/14. 
+
+
+2023-08-24T15:53:35.231-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_b1c731d7_14
+
+2023-08-24T15:53:36.404-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_b1c731d7_14
+
+2023-08-24T15:53:47.144-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_b1c731d7_14 ran in 10.739616083s
+
+2023-08-24T15:53:50.557-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_c0df5882_14 to output/dev/seq_no/14. 
+
+
+2023-08-24T15:53:51.281-0400	INFO	base/material.go:328	Preparing material Material_account_profile_c0df5882_14
+
+2023-08-24T15:53:52.416-0400	INFO	base/material.go:391	Running material Material_account_profile_c0df5882_14
+
+2023-08-24T15:55:00.327-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T15:55:31.103-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_b1c731d7_15 to output/dev/seq_no/15. 
+
+
+2023-08-24T15:55:31.535-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_b1c731d7_15
+
+2023-08-24T15:55:32.683-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_b1c731d7_15
+
+2023-08-24T15:55:43.742-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_b1c731d7_15 ran in 11.058442333s
+
+2023-08-24T15:55:47.114-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_61c84e6d_15 to output/dev/seq_no/15. 
+
+
+2023-08-24T15:55:47.569-0400	INFO	base/material.go:328	Preparing material Material_account_profile_61c84e6d_15
+
+2023-08-24T15:55:48.711-0400	INFO	base/material.go:391	Running material Material_account_profile_61c84e6d_15
+
+2023-08-24T15:56:29.913-0400	INFO	base/material.go:399	Material Material_account_profile_61c84e6d_15 ran in 41.201683584s
+
+2023-08-24T16:00:14.034-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T16:00:47.328-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_b1c731d7_16 to output/dev/seq_no/16. 
+
+
+2023-08-24T16:00:47.750-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_b1c731d7_16
+
+2023-08-24T16:00:48.838-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_b1c731d7_16
+
+2023-08-24T16:01:02.012-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_b1c731d7_16 ran in 13.172947375s
+
+2023-08-24T16:01:07.950-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_e818ab5c_16 to output/dev/seq_no/16. 
+
+
+2023-08-24T16:01:08.624-0400	INFO	base/material.go:328	Preparing material Material_account_profile_e818ab5c_16
+
+2023-08-24T16:01:10.159-0400	INFO	base/material.go:391	Running material Material_account_profile_e818ab5c_16
+
+2023-08-24T16:02:19.585-0400	INFO	base/material.go:399	Material Material_account_profile_e818ab5c_16 ran in 1m9.425297583s
+
+2023-08-24T16:08:09.348-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T16:08:45.351-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_b1c731d7_17 to output/dev/seq_no/17. 
+
+
+2023-08-24T16:08:45.869-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_b1c731d7_17
+
+2023-08-24T16:08:47.584-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_b1c731d7_17
+
+2023-08-24T16:08:59.774-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_b1c731d7_17 ran in 12.188902166s
+
+2023-08-24T16:09:02.988-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_12622288_17 to output/dev/seq_no/17. 
+
+
+2023-08-24T16:09:04.585-0400	INFO	base/material.go:328	Preparing material Material_account_profile_12622288_17
+
+2023-08-24T16:09:05.814-0400	INFO	base/material.go:391	Running material Material_account_profile_12622288_17
+
+2023-08-24T16:09:58.323-0400	INFO	base/material.go:399	Material Material_account_profile_12622288_17 ran in 52.509158834s
+
+2023-08-24T16:10:35.897-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T16:11:16.388-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_b1c731d7_18 to output/dev/seq_no/18. 
+
+
+2023-08-24T16:11:16.886-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_b1c731d7_18
+
+2023-08-24T16:11:18.218-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_b1c731d7_18
+
+2023-08-24T16:11:29.755-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_b1c731d7_18 ran in 11.53615975s
+
+2023-08-24T16:11:33.401-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_2772263d_18 to output/dev/seq_no/18. 
+
+
+2023-08-24T16:11:34.088-0400	INFO	base/material.go:328	Preparing material Material_account_profile_2772263d_18
+
+2023-08-24T16:11:35.316-0400	INFO	base/material.go:391	Running material Material_account_profile_2772263d_18
+
+2023-08-24T16:12:32.045-0400	INFO	base/material.go:399	Material Material_account_profile_2772263d_18 ran in 56.728561042s
+
+2023-08-24T16:18:52.314-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-24T16:19:26.799-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_b1c731d7_19 to output/dev/seq_no/19. 
+
+
+2023-08-24T16:19:27.283-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_b1c731d7_19
+
+2023-08-24T16:19:28.765-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_b1c731d7_19
+
+2023-08-24T16:19:42.229-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_b1c731d7_19 ran in 13.463039417s
+
+2023-08-24T16:19:45.882-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_23e3dd42_19 to output/dev/seq_no/19. 
+
+
+2023-08-24T16:19:46.426-0400	INFO	base/material.go:328	Preparing material Material_account_profile_23e3dd42_19
+
+2023-08-24T16:19:47.597-0400	INFO	base/material.go:391	Running material Material_account_profile_23e3dd42_19
+
+2023-08-24T16:21:23.943-0400	INFO	base/material.go:399	Material Material_account_profile_23e3dd42_19 ran in 1m36.347121166s
+
+2023-08-28T15:52:35.612-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_20 to output/dev/seq_no/20. 
+
+
+2023-08-28T15:52:37.762-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_336d4bb0_20 to output/dev/seq_no/20. 
+
+
+2023-08-28T15:54:01.739-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-28T15:54:38.847-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_21 to output/dev/seq_no/21. 
+
+
+2023-08-28T15:54:39.208-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_21
+
+2023-08-28T15:54:40.587-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_21
+
+2023-08-28T15:54:52.739-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_21 ran in 12.151214375s
+
+2023-08-28T15:54:56.017-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_336d4bb0_21 to output/dev/seq_no/21. 
+
+
+2023-08-28T15:54:56.482-0400	INFO	base/material.go:328	Preparing material Material_account_profile_336d4bb0_21
+
+2023-08-28T15:54:57.586-0400	INFO	base/material.go:391	Running material Material_account_profile_336d4bb0_21
+
+2023-08-29T21:22:26.820-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_22 to output/dev/seq_no/22. 
+
+
+2023-08-29T21:22:28.073-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_489761a3_22 to output/dev/seq_no/22. 
+
+
+2023-08-29T21:23:59.085-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-29T21:24:43.302-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_23 to output/dev/seq_no/23. 
+
+
+2023-08-29T21:24:43.714-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_23
+
+2023-08-29T21:24:45.044-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_23
+
+2023-08-29T21:24:58.765-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_23 ran in 13.7192565s
+
+2023-08-29T21:25:02.622-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_489761a3_23 to output/dev/seq_no/23. 
+
+
+2023-08-29T21:25:03.166-0400	INFO	base/material.go:328	Preparing material Material_account_profile_489761a3_23
+
+2023-08-29T21:25:04.500-0400	INFO	base/material.go:391	Running material Material_account_profile_489761a3_23
+
+2023-08-29T21:27:26.265-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-29T21:28:03.258-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_24 to output/dev/seq_no/24. 
+
+
+2023-08-29T21:28:03.665-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_24
+
+2023-08-29T21:28:04.926-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_24
+
+2023-08-29T21:28:17.746-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_24 ran in 12.818825125s
+
+2023-08-29T21:28:21.136-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_2e5891d1_24 to output/dev/seq_no/24. 
+
+
+2023-08-29T21:28:21.632-0400	INFO	base/material.go:328	Preparing material Material_account_profile_2e5891d1_24
+
+2023-08-29T21:28:22.934-0400	INFO	base/material.go:391	Running material Material_account_profile_2e5891d1_24
+
+2023-08-29T21:30:58.014-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-29T21:31:36.718-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_25 to output/dev/seq_no/25. 
+
+
+2023-08-29T21:31:37.208-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_25
+
+2023-08-29T21:31:38.538-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_25
+
+2023-08-29T21:31:51.788-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_25 ran in 13.247948167s
+
+2023-08-29T21:31:55.106-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_11f1038e_25 to output/dev/seq_no/25. 
+
+
+2023-08-29T21:31:55.641-0400	INFO	base/material.go:328	Preparing material Material_account_profile_11f1038e_25
+
+2023-08-29T21:31:56.733-0400	INFO	base/material.go:391	Running material Material_account_profile_11f1038e_25
+
+2023-08-29T21:32:46.758-0400	INFO	base/material.go:399	Material Material_account_profile_11f1038e_25 ran in 50.0236875s
+
+2023-08-29T21:39:00.553-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-29T21:39:38.107-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_26 to output/dev/seq_no/26. 
+
+
+2023-08-29T21:39:38.597-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_26
+
+2023-08-29T21:39:39.798-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_26
+
+2023-08-29T21:39:52.217-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_26 ran in 12.417975042s
+
+2023-08-29T21:39:55.959-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_e41db9be_26 to output/dev/seq_no/26. 
+
+
+2023-08-29T21:39:56.620-0400	INFO	base/material.go:328	Preparing material Material_account_profile_e41db9be_26
+
+2023-08-29T21:39:57.847-0400	INFO	base/material.go:391	Running material Material_account_profile_e41db9be_26
+
+2023-08-29T21:40:57.729-0400	INFO	base/material.go:399	Material Material_account_profile_e41db9be_26 ran in 59.881437625s
+
+2023-08-30T13:15:58.316-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-08-30T13:16:44.634-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_27 to output/dev/seq_no/27. 
+
+
+2023-08-30T13:16:45.155-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_27
+
+2023-08-30T13:16:46.463-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_27
+
+2023-08-30T13:17:03.383-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_27 ran in 16.919389958s
+
+2023-08-30T13:17:07.954-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_41702587_27 to output/dev/seq_no/27. 
+
+
+2023-08-30T13:17:08.603-0400	INFO	base/material.go:328	Preparing material Material_account_profile_41702587_27
+
+2023-08-30T13:17:10.681-0400	INFO	base/material.go:391	Running material Material_account_profile_41702587_27
+
+2023-08-30T13:18:33.267-0400	INFO	base/material.go:399	Material Material_account_profile_41702587_27 ran in 1m22.584757875s
+
+2023-09-08T10:45:47.755-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-09-08T10:46:24.477-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_28 to output/dev/seq_no/28. 
+
+
+2023-09-08T10:46:24.885-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_28
+
+2023-09-08T10:46:26.147-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_28
+
+2023-09-08T10:46:42.430-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_28 ran in 16.28245975s
+
+2023-09-08T10:46:46.142-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_cd2e2e0a_28 to output/dev/seq_no/28. 
+
+
+2023-09-08T10:46:46.614-0400	INFO	base/material.go:328	Preparing material Material_account_profile_cd2e2e0a_28
+
+2023-09-08T10:46:47.809-0400	INFO	base/material.go:391	Running material Material_account_profile_cd2e2e0a_28
+
+2023-09-08T10:49:05.615-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-09-08T10:49:42.058-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_29 to output/dev/seq_no/29. 
+
+
+2023-09-08T10:49:42.558-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_29
+
+2023-09-08T10:49:43.782-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_29
+
+2023-09-08T10:49:57.751-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_29 ran in 13.967869875s
+
+2023-09-08T10:50:00.859-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_b84d0a8a_29 to output/dev/seq_no/29. 
+
+
+2023-09-08T10:50:01.332-0400	INFO	base/material.go:328	Preparing material Material_account_profile_b84d0a8a_29
+
+2023-09-08T10:50:02.588-0400	INFO	base/material.go:391	Running material Material_account_profile_b84d0a8a_29
+
+2023-09-08T10:50:52.386-0400	INFO	base/material.go:399	Material Material_account_profile_b84d0a8a_29 ran in 49.797560541s
+
+2023-09-08T10:53:40.865-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-09-08T10:54:16.796-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_30 to output/dev/seq_no/30. 
+
+
+2023-09-08T10:54:17.403-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_30
+
+2023-09-08T10:54:18.657-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_30
+
+2023-09-08T10:54:30.972-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_30 ran in 12.313991917s
+
+2023-09-08T10:54:34.492-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_082df75f_30 to output/dev/seq_no/30. 
+
+
+2023-09-08T10:54:35.014-0400	INFO	base/material.go:328	Preparing material Material_account_profile_082df75f_30
+
+2023-09-08T10:54:36.450-0400	INFO	base/material.go:391	Running material Material_account_profile_082df75f_30
+
+2023-09-08T10:56:05.679-0400	INFO	base/material.go:399	Material Material_account_profile_082df75f_30 ran in 1m29.2267365s
+
+2023-09-08T14:09:09.011-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-09-08T14:09:46.284-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_31 to output/dev/seq_no/31. 
+
+
+2023-09-08T14:09:46.682-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_31
+
+2023-09-08T14:09:48.149-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_31
+
+2023-09-08T14:10:02.458-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_31 ran in 14.308578083s
+
+2023-09-08T14:10:06.056-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_b899a789_31 to output/dev/seq_no/31. 
+
+
+2023-09-08T14:10:06.672-0400	INFO	base/material.go:328	Preparing material Material_account_profile_b899a789_31
+
+2023-09-08T14:10:07.939-0400	INFO	base/material.go:391	Running material Material_account_profile_b899a789_31
+
+2023-09-08T14:11:41.412-0400	INFO	base/material.go:399	Material Material_account_profile_b899a789_31 ran in 1m33.473052291s
+
+2023-09-08T14:17:04.348-0400	INFO	run/run.go:31	Checking required schema access
+
+2023-09-08T14:17:42.079-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_32 to output/dev/seq_no/32. 
+
+
+2023-09-08T14:17:42.541-0400	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_32
+
+2023-09-08T14:17:43.712-0400	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_32
+
+2023-09-08T14:18:01.996-0400	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_32 ran in 18.283391459s
+
+2023-09-08T14:18:06.314-0400	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_01b6db7e_32 to output/dev/seq_no/32. 
+
+
+2023-09-08T14:18:06.819-0400	INFO	base/material.go:328	Preparing material Material_account_profile_01b6db7e_32
+
+2023-09-08T14:18:08.051-0400	INFO	base/material.go:391	Running material Material_account_profile_01b6db7e_32
+
+2023-09-08T14:19:45.864-0400	INFO	base/material.go:399	Material Material_account_profile_01b6db7e_32 ran in 1m37.812974541s
+
+2023-09-19T17:25:37.290+0300	INFO	run/run.go:31	Checking required schema access
+
+2023-09-19T17:26:34.143+0300	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_33 to output/dev/seq_no/33. 
+
+
+2023-09-19T17:26:34.822+0300	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_33
+
+2023-09-19T17:26:37.360+0300	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_33
+
+2023-09-19T17:26:53.527+0300	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_33 ran in 16.164709834s
+
+2023-09-19T17:26:59.587+0300	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_9bbe85df_33 to output/dev/seq_no/33. 
+
+
+2023-09-19T17:27:00.350+0300	INFO	base/material.go:328	Preparing material Material_account_profile_9bbe85df_33
+
+2023-09-19T17:27:02.208+0300	INFO	base/material.go:391	Running material Material_account_profile_9bbe85df_33
+
+2023-09-19T17:29:03.335+0300	INFO	base/material.go:399	Material Material_account_profile_9bbe85df_33 ran in 2m1.128652334s
+
+2023-09-19T17:30:44.027+0300	INFO	run/run.go:31	Checking required schema access
+
+2023-09-19T17:31:47.641+0300	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_6b1ce8f1_34 to output/dev/seq_no/34. 
+
+
+2023-09-19T17:31:48.366+0300	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_6b1ce8f1_34
+
+2023-09-19T17:31:50.225+0300	INFO	base/material.go:391	Running material Material_account_id_stitcher_6b1ce8f1_34
+
+2023-09-19T17:32:05.339+0300	INFO	base/material.go:399	Material Material_account_id_stitcher_6b1ce8f1_34 ran in 15.113061917s
+
+2023-09-19T17:32:10.667+0300	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_0dd18e6b_34 to output/dev/seq_no/34. 
+
+
+2023-09-19T17:32:11.480+0300	INFO	base/material.go:328	Preparing material Material_account_profile_0dd18e6b_34
+
+2023-09-19T17:32:13.427+0300	INFO	base/material.go:391	Running material Material_account_profile_0dd18e6b_34
+
+2023-09-19T17:45:22.503+0300	INFO	utils/errors.go:38	Context canceled, terminating gracefully!
+
+2023-09-19T17:48:06.447+0300	INFO	run/run.go:31	Checking required schema access
+
+2023-09-19T17:49:34.006+0300	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_f603b480_35 to output/dev/seq_no/35. 
+
+
+2023-09-19T17:49:34.825+0300	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_f603b480_35
+
+2023-09-19T17:49:36.763+0300	INFO	base/material.go:391	Running material Material_account_id_stitcher_f603b480_35
+
+2023-09-19T17:49:55.151+0300	INFO	base/material.go:399	Material Material_account_id_stitcher_f603b480_35 ran in 18.386572583s
+
+2023-09-19T17:50:00.327+0300	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_e6a3c9dc_35 to output/dev/seq_no/35. 
+
+
+2023-09-19T17:50:01.131+0300	INFO	base/material.go:328	Preparing material Material_account_profile_e6a3c9dc_35
+
+2023-09-19T17:50:03.075+0300	INFO	base/material.go:391	Running material Material_account_profile_e6a3c9dc_35
+
+2023-09-19T17:52:08.493+0300	INFO	base/material.go:399	Material Material_account_profile_e6a3c9dc_35 ran in 2m5.418978292s
+
+2023-09-19T18:07:19.594+0300	INFO	run/run.go:31	Checking required schema access
+
+2023-09-19T18:09:01.685+0300	INFO	base/interfaces.go:251	Compiled model. Material_account_id_stitcher_f603b480_36 to output/dev/seq_no/36. 
+
+
+2023-09-19T18:09:02.541+0300	INFO	base/material.go:328	Preparing material Material_account_id_stitcher_f603b480_36
+
+2023-09-19T18:09:05.823+0300	INFO	base/material.go:391	Running material Material_account_id_stitcher_f603b480_36
+
+2023-09-19T18:09:24.871+0300	INFO	base/material.go:399	Material Material_account_id_stitcher_f603b480_36 ran in 19.0464715s
+
+2023-09-19T18:09:31.135+0300	INFO	base/interfaces.go:251	Compiled model. Material_account_profile_2fafffa4_36 to output/dev/seq_no/36. 
+
+
+2023-09-19T18:09:31.969+0300	INFO	base/material.go:328	Preparing material Material_account_profile_2fafffa4_36
+
+2023-09-19T18:09:33.916+0300	INFO	base/material.go:391	Running material Material_account_profile_2fafffa4_36
+
+2023-09-19T18:12:34.961+0300	INFO	base/material.go:399	Material Material_account_profile_2fafffa4_36 ran in 3m1.044991792s
+
+2023-09-19T19:09:44.546+0300	INFO	migrate/migrate.go:159	Project migrated from version 38 to version 42
+
+2023-09-19T19:09:48.340+0300	INFO	validate/access.go:31	Checking warehouse connectivity
+
+2023-09-19T19:09:49.767+0300	INFO	validate/access.go:56	Checking required schema access
+
+2023-09-19T19:09:50.187+0300	INFO	validate/access.go:78	Preparing registry setup
+
+2023-09-19T19:09:58.223+0300	INFO	validate/access.go:87	Accessing context
+
+2023-09-19T19:10:02.115+0300	INFO	validate/access.go:97	Accessing all models
+
+2023-09-19T19:10:02.116+0300	INFO	validate/access.go:109	Checking required access for creating UDFs
+
+2023-09-19T19:10:02.116+0300	INFO	validate/access.go:123	Checking required access to inputs for models
+
+2023-09-19T19:10:15.183+0300	INFO	validate/access.go:135	All required access are available
+
+2023-09-19T19:10:15.184+0300	INFO	validate/access.go:136	Connection environment: dev have all the required read/right privileges
+
+2023-09-19T19:13:50.301+0300	INFO	run/run.go:32	Checking required schema access
+
+2023-09-19T19:14:34.711+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_38 to output/dev/seq_no/38. 
+
+
+2023-09-19T19:14:35.948+0300	INFO	base/material.go:343	Preparing material Material_account_id_stitcher_53876bca_38
+
+2023-09-19T19:14:37.934+0300	INFO	base/material.go:411	Running material Material_account_id_stitcher_53876bca_38
+
+2023-09-19T19:14:55.747+0300	INFO	base/material.go:419	Material Material_account_id_stitcher_53876bca_38 ran in 17.812496958s
+
+2023-09-19T19:15:01.337+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_789394e3_38 to output/dev/seq_no/38. 
+
+
+2023-09-19T19:15:02.203+0300	INFO	base/material.go:343	Preparing material Material_account_profile_789394e3_38
+
+2023-09-19T19:15:04.535+0300	INFO	base/material.go:411	Running material Material_account_profile_789394e3_38
+
+2023-09-19T19:17:43.495+0300	INFO	base/material.go:419	Material Material_account_profile_789394e3_38 ran in 2m38.881493625s
+
+2023-09-19T19:17:48.636+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_38 to output/dev/seq_no/38. 
+
+
+2023-09-19T19:17:49.325+0300	INFO	base/material.go:343	Preparing material Material_salesforce_id_account_default_entity_serve_360_75e952d2_38
+
+2023-09-19T19:17:51.225+0300	INFO	base/material.go:411	Running material Material_salesforce_id_account_default_entity_serve_360_75e952d2_38
+
+2023-09-19T19:17:51.665+0300	INFO	base/material.go:419	Material Material_salesforce_id_account_default_entity_serve_360_75e952d2_38 ran in 438.926417ms
+
+2023-09-20T17:03:17.044+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_39 to output/dev/seq_no/39. 
+
+
+2023-09-20T17:03:19.891+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_789394e3_39 to output/dev/seq_no/39. 
+
+
+2023-09-20T17:03:22.085+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_39 to output/dev/seq_no/39. 
+
+
+2023-09-20T17:04:18.249+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_40 to output/dev/seq_no/40. 
+
+
+2023-09-20T17:04:21.196+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_cc263a90_40 to output/dev/seq_no/40. 
+
+
+2023-09-20T17:04:23.636+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_40 to output/dev/seq_no/40. 
+
+
+2023-09-20T17:04:25.552+0300	INFO	run/run.go:32	Checking required schema access
+
+2023-09-20T17:05:11.883+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_41 to output/dev/seq_no/41. 
+
+
+2023-09-20T17:05:12.597+0300	INFO	base/material.go:343	Preparing material Material_account_id_stitcher_53876bca_41
+
+2023-09-20T17:05:14.787+0300	INFO	base/material.go:411	Running material Material_account_id_stitcher_53876bca_41
+
+2023-09-20T17:05:34.628+0300	INFO	base/material.go:419	Material Material_account_id_stitcher_53876bca_41 ran in 19.840736584s
+
+2023-09-20T17:05:42.301+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_cc263a90_41 to output/dev/seq_no/41. 
+
+
+2023-09-20T17:05:43.157+0300	INFO	base/material.go:343	Preparing material Material_account_profile_cc263a90_41
+
+2023-09-20T17:05:45.235+0300	INFO	base/material.go:411	Running material Material_account_profile_cc263a90_41
+
+2023-09-20T17:08:23.449+0300	INFO	base/material.go:419	Material Material_account_profile_cc263a90_41 ran in 2m38.212911041s
+
+2023-09-20T17:08:28.251+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_41 to output/dev/seq_no/41. 
+
+
+2023-09-20T17:08:29.013+0300	INFO	base/material.go:343	Preparing material Material_salesforce_id_account_default_entity_serve_360_75e952d2_41
+
+2023-09-20T17:08:30.857+0300	INFO	base/material.go:411	Running material Material_salesforce_id_account_default_entity_serve_360_75e952d2_41
+
+2023-09-20T17:08:31.257+0300	INFO	base/material.go:419	Material Material_salesforce_id_account_default_entity_serve_360_75e952d2_41 ran in 398.224ms
+
+2023-09-20T17:09:01.867+0300	INFO	run/run.go:32	Checking required schema access
+
+2023-09-20T17:09:42.367+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_42 to output/dev/seq_no/42. 
+
+
+2023-09-20T17:09:43.062+0300	INFO	base/material.go:343	Preparing material Material_account_id_stitcher_53876bca_42
+
+2023-09-20T17:09:44.840+0300	INFO	base/material.go:411	Running material Material_account_id_stitcher_53876bca_42
+
+2023-09-20T17:10:01.479+0300	INFO	base/material.go:419	Material Material_account_id_stitcher_53876bca_42 ran in 16.637775833s
+
+2023-09-20T17:10:07.575+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_1d6455b5_42 to output/dev/seq_no/42. 
+
+
+2023-09-20T17:10:08.445+0300	INFO	base/material.go:343	Preparing material Material_account_profile_1d6455b5_42
+
+2023-09-20T17:10:10.289+0300	INFO	base/material.go:411	Running material Material_account_profile_1d6455b5_42
+
+2023-09-20T17:22:42.772+0300	INFO	run/run.go:32	Checking required schema access
+
+2023-09-20T17:23:25.007+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_43 to output/dev/seq_no/43. 
+
+
+2023-09-20T17:23:25.767+0300	INFO	base/material.go:343	Preparing material Material_account_id_stitcher_53876bca_43
+
+2023-09-20T17:23:27.770+0300	INFO	base/material.go:411	Running material Material_account_id_stitcher_53876bca_43
+
+2023-09-20T17:23:44.355+0300	INFO	base/material.go:419	Material Material_account_id_stitcher_53876bca_43 ran in 16.584591208s
+
+2023-09-20T17:23:49.847+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_68361ba3_43 to output/dev/seq_no/43. 
+
+
+2023-09-20T17:23:50.685+0300	INFO	base/material.go:343	Preparing material Material_account_profile_68361ba3_43
+
+2023-09-20T17:23:52.464+0300	INFO	base/material.go:411	Running material Material_account_profile_68361ba3_43
+
+2023-09-20T17:26:30.673+0300	INFO	base/material.go:419	Material Material_account_profile_68361ba3_43 ran in 2m38.206089417s
+
+2023-09-20T17:26:35.946+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_43 to output/dev/seq_no/43. 
+
+
+2023-09-20T17:26:36.844+0300	INFO	base/material.go:343	Preparing material Material_salesforce_id_account_default_entity_serve_360_75e952d2_43
+
+2023-09-20T17:26:38.594+0300	INFO	base/material.go:411	Running material Material_salesforce_id_account_default_entity_serve_360_75e952d2_43
+
+2023-09-20T17:26:39.003+0300	INFO	base/material.go:419	Material Material_salesforce_id_account_default_entity_serve_360_75e952d2_43 ran in 407.210083ms
+
+2023-09-20T18:39:11.133+0300	INFO	run/run.go:32	Checking required schema access
+
+2023-09-20T18:39:52.349+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_44 to output/dev/seq_no/44. 
+
+
+2023-09-20T18:39:53.375+0300	INFO	base/material.go:343	Preparing material Material_account_id_stitcher_53876bca_44
+
+2023-09-20T18:39:55.276+0300	INFO	base/material.go:411	Running material Material_account_id_stitcher_53876bca_44
+
+2023-09-20T18:40:13.987+0300	INFO	base/material.go:419	Material Material_account_id_stitcher_53876bca_44 ran in 18.710009958s
+
+2023-09-20T18:40:19.884+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_68361ba3_44 to output/dev/seq_no/44. 
+
+
+2023-09-20T18:40:20.736+0300	INFO	base/material.go:343	Preparing material Material_account_profile_68361ba3_44
+
+2023-09-20T18:40:22.613+0300	INFO	base/material.go:411	Running material Material_account_profile_68361ba3_44
+
+2023-09-20T18:43:01.363+0300	INFO	base/material.go:419	Material Material_account_profile_68361ba3_44 ran in 2m38.746982083s
+
+2023-09-20T18:43:05.717+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_44 to output/dev/seq_no/44. 
+
+
+2023-09-20T18:43:06.398+0300	INFO	base/material.go:343	Preparing material Material_salesforce_id_account_default_entity_serve_360_75e952d2_44
+
+2023-09-20T18:43:08.248+0300	INFO	base/material.go:411	Running material Material_salesforce_id_account_default_entity_serve_360_75e952d2_44
+
+2023-09-20T18:43:08.593+0300	INFO	base/material.go:419	Material Material_salesforce_id_account_default_entity_serve_360_75e952d2_44 ran in 345.0935ms
+
+2023-09-20T18:43:44.228+0300	INFO	run/run.go:32	Checking required schema access
+
+2023-09-20T18:44:25.709+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_45 to output/dev/seq_no/45. 
+
+
+2023-09-20T18:44:26.483+0300	INFO	base/material.go:343	Preparing material Material_account_id_stitcher_53876bca_45
+
+2023-09-20T18:44:28.166+0300	INFO	base/material.go:411	Running material Material_account_id_stitcher_53876bca_45
+
+2023-09-20T18:44:42.279+0300	INFO	base/material.go:419	Material Material_account_id_stitcher_53876bca_45 ran in 14.111676542s
+
+2023-09-20T18:44:47.828+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_25bd8d4b_45 to output/dev/seq_no/45. 
+
+
+2023-09-20T18:44:48.645+0300	INFO	base/material.go:343	Preparing material Material_account_profile_25bd8d4b_45
+
+2023-09-20T18:44:50.642+0300	INFO	base/material.go:411	Running material Material_account_profile_25bd8d4b_45
+
+2023-09-20T18:47:28.098+0300	INFO	base/material.go:419	Material Material_account_profile_25bd8d4b_45 ran in 2m37.4541545s
+
+2023-09-20T18:47:32.704+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_45 to output/dev/seq_no/45. 
+
+
+2023-09-20T18:47:33.376+0300	INFO	base/material.go:343	Preparing material Material_salesforce_id_account_default_entity_serve_360_75e952d2_45
+
+2023-09-20T18:47:35.142+0300	INFO	base/material.go:411	Running material Material_salesforce_id_account_default_entity_serve_360_75e952d2_45
+
+2023-09-20T18:47:35.518+0300	INFO	base/material.go:419	Material Material_salesforce_id_account_default_entity_serve_360_75e952d2_45 ran in 374.797375ms
+
+2023-09-20T18:53:10.514+0300	INFO	run/run.go:32	Checking required schema access
+
+2023-09-20T18:53:48.655+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_46 to output/dev/seq_no/46. 
+
+
+2023-09-20T18:53:49.301+0300	INFO	base/material.go:343	Preparing material Material_account_id_stitcher_53876bca_46
+
+2023-09-20T18:53:51.022+0300	INFO	base/material.go:411	Running material Material_account_id_stitcher_53876bca_46
+
+2023-09-20T18:54:06.476+0300	INFO	base/material.go:419	Material Material_account_id_stitcher_53876bca_46 ran in 15.455200833s
+
+2023-09-20T18:54:11.643+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_f0fc0529_46 to output/dev/seq_no/46. 
+
+
+2023-09-20T18:54:12.422+0300	INFO	base/material.go:343	Preparing material Material_account_profile_f0fc0529_46
+
+2023-09-20T18:54:14.232+0300	INFO	base/material.go:411	Running material Material_account_profile_f0fc0529_46
+
+2023-09-20T18:56:47.042+0300	INFO	base/material.go:419	Material Material_account_profile_f0fc0529_46 ran in 2m32.809780333s
+
+2023-09-20T18:56:51.488+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_46 to output/dev/seq_no/46. 
+
+
+2023-09-20T18:56:52.135+0300	INFO	base/material.go:343	Preparing material Material_salesforce_id_account_default_entity_serve_360_75e952d2_46
+
+2023-09-20T18:56:53.873+0300	INFO	base/material.go:411	Running material Material_salesforce_id_account_default_entity_serve_360_75e952d2_46
+
+2023-09-20T18:56:54.207+0300	INFO	base/material.go:419	Material Material_salesforce_id_account_default_entity_serve_360_75e952d2_46 ran in 332.888ms
+
+2023-09-20T20:55:57.226+0300	INFO	run/run.go:32	Checking required schema access
+
+2023-09-20T20:56:39.064+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_id_stitcher_53876bca_47 to output/dev/seq_no/47. 
+
+
+2023-09-20T20:56:40.037+0300	INFO	base/material.go:343	Preparing material Material_account_id_stitcher_53876bca_47
+
+2023-09-20T20:56:42.287+0300	INFO	base/material.go:411	Running material Material_account_id_stitcher_53876bca_47
+
+2023-09-20T20:56:56.957+0300	INFO	base/material.go:419	Material Material_account_id_stitcher_53876bca_47 ran in 14.669417834s
+
+2023-09-20T20:57:03.317+0300	INFO	base/interfaces.go:256	Compiled model. Material_account_profile_5ec3afc8_47 to output/dev/seq_no/47. 
+
+
+2023-09-20T20:57:04.106+0300	INFO	base/material.go:343	Preparing material Material_account_profile_5ec3afc8_47
+
+2023-09-20T20:57:06.497+0300	INFO	base/material.go:411	Running material Material_account_profile_5ec3afc8_47
+
+2023-09-20T20:59:51.264+0300	INFO	base/material.go:419	Material Material_account_profile_5ec3afc8_47 ran in 2m44.767337875s
+
+2023-09-20T20:59:55.714+0300	INFO	base/interfaces.go:256	Compiled model. Material_salesforce_id_account_default_entity_serve_360_75e952d2_47 to output/dev/seq_no/47. 
+
+
+2023-09-20T20:59:56.453+0300	INFO	base/material.go:343	Preparing material Material_salesforce_id_account_default_entity_serve_360_75e952d2_47
+
+2023-09-20T20:59:58.565+0300	INFO	base/material.go:411	Running material Material_salesforce_id_account_default_entity_serve_360_75e952d2_47
+
+2023-09-20T20:59:59.013+0300	INFO	base/material.go:419	Material Material_salesforce_id_account_default_entity_serve_360_75e952d2_47 ran in 446.30325ms
+

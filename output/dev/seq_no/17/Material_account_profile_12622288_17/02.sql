@@ -1,0 +1,3 @@
+ CREATE OR REPLACE TEMPORARY TABLE ENTITYVARTABLE_ACCOUNT_9AF_17 AS (
+        SELECT DISTINCT account_main_id FROM Material_account_id_stitcher_b1c731d7_17
+    ); 

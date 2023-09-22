@@ -1,0 +1,31 @@
+ CREATE OR REPLACE TEMPORARY TABLE MATERIAL_ACCOUNT_PROFILE_489761A3_22_INTERNAL_EV_SF_OPPORTUNITY_MOST_RECENT_STAGE_NAME AS (
+            
+                SELECT
+                    account_main_id,
+                    ANY_VALUE (sf_opportunity_most_recent_stage_name) AS sf_opportunity_most_recent_stage_name
+                FROM (
+            SELECT
+                account_main_id,
+                stage_name
+	OVER (
+		
+    -- todo: fix this
+	PARTITION BY account_main_id
+
+		
+	ORDER BY last_modified_date desc
+
+		
+	)
+	 AS sf_opportunity_most_recent_stage_name
+            FROM entityVarTable_account_9af_22
+            
+            RIGHT JOIN inputVarTable_sf_opportunity_c34_22 USING (account_main_id)
+            
+            WHERE account_main_id IS NOT NULL
+            
+            
+        )
+                GROUP BY account_main_id
+            
+        ); 

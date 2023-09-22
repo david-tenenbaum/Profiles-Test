@@ -1,0 +1,15 @@
+ CREATE OR REPLACE VIEW MATERIAL_EMAILS_06C7C96D_36 AS 
+SELECT
+    *
+FROM
+    DEMO_DB.DAVID_T.EMAILS
+
+WHERE
+    
+        ((
+         DATE <= '2023-09-19T15:07:25.568237Z'
+        )
+         OR DATE IS NULL )
+    
+
+; 

@@ -1,0 +1,15 @@
+ CREATE OR REPLACE VIEW MATERIAL_GONG_CALLS_D1B10DA3_38 AS 
+SELECT
+    *
+FROM
+    DEMO_DB.DAVID_T.GONG_CALLS
+
+WHERE
+    
+        ((
+         DATE <= '2023-09-19T16:13:54.712633Z'
+        )
+         OR DATE IS NULL )
+    
+
+; 

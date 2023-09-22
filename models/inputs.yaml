@@ -1,0 +1,86 @@
+# This is a sample file, for detailed reference see: https://rudderlabs.github.io/pywht/
+inputs:
+  - name: sf_opportunity
+    contract:
+      is_optional: false
+      is_event_stream: true
+      with_entity_ids:
+        - account
+      with_columns:
+        - name: CREATED_DATE
+        - name: ACCOUNT_ID
+    app_defaults:
+      table: RUDDER_SALESFORCE.PUBLIC.SF_OPPORTUNITY
+      occurred_at_col: CREATED_DATE
+      ids:
+        - entity: account
+          select: ACCOUNT_ID
+          type: salesforce_id
+          to_default_stitcher: true
+  - name: sf_account
+    contract:
+      is_optional: false
+      is_event_stream: true
+      with_entity_ids:
+        - account
+      with_columns:
+        - name: CREATED_DATE
+    app_defaults:
+      table: DEMO_DB.DAVID_T.SF_ACCOUNT
+      occurred_at_col: CREATED_DATE
+      ids:
+        - entity: account
+          select: case when account_status_c is not null then "ID" when record_type_id <> '0125x0000006uLeAAI' then "ID" when is_deleted = FALSE then "ID" end
+          type: salesforce_id
+          to_default_stitcher: true
+  - name: gong_calls
+    contract:
+      is_optional: false
+      is_event_stream: true
+      with_entity_ids:
+        - account
+      with_columns:
+        - name: DATE
+        - name: SALESFORCE_ID
+    app_defaults:
+      table: DEMO_DB.DAVID_T.GONG_CALLS
+      occurred_at_col: DATE
+      ids:
+        - entity: account
+          select: SALESFORCE_ID
+          type: salesforce_id
+          to_default_stitcher: true
+  - name: emails
+    contract:
+      is_optional: false
+      is_event_stream: true
+      with_entity_ids:
+        - account
+      with_columns:
+        - name: DATE
+        - name: SALESFORCE_ID
+    app_defaults:
+      table: DEMO_DB.DAVID_T.EMAILS
+      occurred_at_col: DATE
+      ids:
+        - entity: account
+          select: SALESFORCE_ID
+          type: salesforce_id
+          to_default_stitcher: true
+  - name: other_tasks
+    contract:
+      is_optional: false
+      is_event_stream: true
+      with_entity_ids:
+        - account
+      with_columns:
+        - name: DATE
+        - name: SALESFORCE_ID
+    app_defaults:
+      table: DEMO_DB.DAVID_T.OTHER_SF_TASKS
+      occurred_at_col: DATE
+      ids:
+        - entity: account
+          select: SALESFORCE_ID
+          type: salesforce_id
+          to_default_stitcher: true

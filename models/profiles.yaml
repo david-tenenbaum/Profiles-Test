@@ -1,0 +1,239 @@
+# This is a sample file, for detailed reference see: https://rudderlabs.github.io/pywht/
+models:
+  - name: account_id_stitcher
+    model_type: id_stitcher
+    model_spec:
+      validity_time: 24h # 1 day
+      entity_key: account
+      edge_sources:
+        - from: inputs/sf_opportunity
+        - from: inputs/sf_account
+        - from: inputs/gong_calls
+        - from: inputs/emails
+        - from: inputs/other_tasks
+  - name: account_profile
+    model_type: feature_table_model
+    model_spec:
+      validity_time: 24h # 1 day
+      entity_key: account
+      vars:
+        - entity_var:
+            name: sf_account_id
+            select: any_value(id)
+            from: inputs/sf_account
+            where: record_type_id <> '0125x0000006uLeAAI'
+        - entity_var:
+            name: sf_account_name
+            select: any_value(name)
+            from: inputs/sf_account
+            where: record_type_id <> '0125x0000006uLeAAI'
+        - entity_var:
+            name: sf_account_industry
+            select: any_value(industry)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_account_website
+            select: any_value(website)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_account_owner_id
+            select: any_value(owner_id)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_account_owner_name
+            select: any_value(owner_name)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_account_created_by_id
+            select: any_value(created_by_id)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_account_last_activity_date
+            select: any_value(last_activity_date)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_account_company_type_c
+            select: any_value(company_type_c)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_account_account_status_c
+            select: any_value(account_status_c)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_account_account_sub_status_c
+            select: any_value(account_sub_status_c)
+            from: inputs/sf_account
+        - entity_var:
+            name: sf_opportunity_most_recent_id
+            select: first_value(id)
+            from: inputs/sf_opportunity
+            where: record_type_id <> '0125x0000006uLeAAI' AND effective_date_c IS NOT null
+            window:
+              order_by:
+                - effective_date_c desc
+        - entity_var:
+            name: sf_opportunity_name
+            select: any_value(name)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_most_recent_amount
+            select: any_value(amount)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_expected_revenue
+            select: any_value(expected_revenue)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_forecast_category
+            select: any_value(forecast_category_name)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_is_closed
+            select: any_value(is_closed)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_is_won
+            select: any_value(is_won)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_most_recent_lead_source
+            select: any_value(lead_source)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_most_recent_next_step
+            select: any_value(next_step)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_most_recent_stage_name
+            select: any_value(stage_name)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_most_recent_type
+            select: any_value(type)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_poc_c
+            select: any_value(poc_c)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_poc_started_date_c
+            select: any_value(poc_started_date_c)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_segment_customer_c
+            select: any_value(segment_customer_c)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_most_recent_probability
+            select: any_value(probability)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        - entity_var:
+            name: sf_opportunity_company_type_c
+            select: any_value(company_type_c)
+            from: inputs/sf_opportunity
+            where: id = sf_opportunity_most_recent_id
+        # gong
+        - entity_var:
+            from: inputs/gong_calls
+            name: sf_most_recent_call_date
+            select: first_value(DATE)
+            window:
+              order_by:
+                - DATE desc
+        - entity_var:
+            from: inputs/gong_calls
+            name: sf_call_count_last_7
+            select: count(*)
+            where: DATE > dateadd(day, -7, current_date())
+        - entity_var:
+            from: inputs/gong_calls
+            name: sf_call_count_last_14
+            select: count(*)
+            where: DATE > dateadd(day, -14, current_date())
+        - entity_var:
+            from: inputs/gong_calls
+            name: sf_call_count_last_30
+            select: count(*)
+            where: DATE > dateadd(day, -30, current_date())
+        # email
+        - entity_var:
+            from: inputs/emails
+            name: sf_most_recent_email_date
+            select: first_value(DATE)
+            window:
+              order_by:
+                - DATE desc
+        - entity_var:
+            from: inputs/emails
+            name: sf_email_count_last_7
+            select: count(*)
+            where: DATE > dateadd(day, -7, current_date())
+        - entity_var:
+            from: inputs/emails
+            name: sf_email_count_last_14
+            select: count(*)
+            where: DATE > dateadd(day, -14, current_date())
+        - entity_var:
+            from: inputs/emails
+            name: sf_email_count_last_30
+            select: count(*)
+            where: DATE > dateadd(day, -30, current_date())
+
+        #
+        - entity_var:
+            name: sf_days_since_last_activity
+            select: DATEDIFF(day, (case when sf_most_recent_call_date > sf_most_recent_email_date THEN sf_most_recent_call_date ELSE sf_most_recent_email_date end), current_date())
+            where: sf_most_recent_call_date is not null and sf_most_recent_email_date is not null
+
+      features:
+        - sf_account_id
+        - sf_account_name
+        - sf_account_industry
+        - sf_account_website
+        - sf_account_owner_id
+        - sf_account_owner_name
+        - sf_account_created_by_id
+        - sf_account_last_activity_date
+        - sf_account_company_type_c
+        - sf_account_account_status_c
+        - sf_account_account_sub_status_c
+        - sf_opportunity_most_recent_id
+        - sf_opportunity_name
+        - sf_opportunity_most_recent_amount
+        - sf_opportunity_expected_revenue
+        - sf_opportunity_forecast_category
+        - sf_opportunity_is_closed
+        - sf_opportunity_is_won
+        - sf_opportunity_most_recent_lead_source
+        - sf_opportunity_most_recent_next_step
+        - sf_opportunity_most_recent_stage_name
+        - sf_opportunity_most_recent_type
+        - sf_opportunity_poc_c
+        - sf_opportunity_poc_started_date_c
+        - sf_opportunity_segment_customer_c
+        - sf_opportunity_most_recent_probability
+        - sf_opportunity_company_type_c
+        - sf_most_recent_call_date
+        - sf_most_recent_email_date
+        - sf_days_since_last_activity
+        - sf_call_count_last_7
+        - sf_call_count_last_14
+        - sf_call_count_last_30
+        - sf_email_count_last_7
+        - sf_email_count_last_14
+        - sf_email_count_last_30
+# last email date, last call date, days since last activity (calc referencing these columns)
